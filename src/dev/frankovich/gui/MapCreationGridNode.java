@@ -1,3 +1,24 @@
+// ******************************************************
+// Class:			MapCreationGridNode
+// Name:			Carson Frankovich
+// Date:			2022-11-07
+//
+// Purpose:			Provides configurable pieces for the grid in the map creation tool.
+//
+// Attributes:		-button: JButton
+//					-nodeType: int
+//					-xLocation: int
+//					-yLocation: int
+//					
+// Methods:			-configureButton( MapCreationTool, int, int ): void
+//					+mouseClicked( MouseEvent ): void
+//					+mouseEntered( MouseEvent ): void
+//					+mouseExited( MouseEvent ): void
+//					-actUponTool( int ): void
+//					+getNodeType( ): int
+//					
+// ******************************************************
+
 package dev.frankovich.gui;
 
 import javax.swing.JPanel;
@@ -12,7 +33,8 @@ public class MapCreationGridNode
     private final int HEIGHT = 25;
     private JButton button;
     private int nodeType;
-    private int xLocation, yLocation;
+    private int xLocation;
+    private int yLocation;
     /* 
      * 0 : nothing
      * 3 : house

@@ -1,3 +1,22 @@
+// ******************************************************
+// Class:			MapCreationToolBar
+// Name:			Carson Frankovich
+// Date:			2022-11-07
+//
+// Purpose:			Contains all attributes and behaviors for the tool bar in the map creation tool.
+//
+// Attributes:		-toolbarpanel: JPanel
+//					-tools[]: JButton
+//					
+// Methods:			+configureToolBarPanel( ): void
+//					+configureToolBarButtons( MapCreationTool ): void
+//					-setToolBarListeners( MapCreationTool, int ): void
+//					+mouseClicked( MouseEvent ): void
+//					+addToolBarButtons( ): void
+//					+getPanel( ): JPanel
+//					
+// ******************************************************
+
 package dev.frankovich.gui;
 
 import java.awt.Color;

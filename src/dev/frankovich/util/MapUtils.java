@@ -1,3 +1,18 @@
+// ******************************************************
+// Class:			MapUtils
+// Name:			Carson Frankovich
+// Date:			2022-11-07
+//
+// Purpose:			Extra tools regarding the map of the simulation.
+//
+// Attributes:		
+//
+// Methods:			+createMap( ): void
+//					+useMap( String ): Node[][]
+//					+compressMap( ): void
+//					
+// ******************************************************
+
 package dev.frankovich.util;
 
 import dev.frankovich.sim.House;

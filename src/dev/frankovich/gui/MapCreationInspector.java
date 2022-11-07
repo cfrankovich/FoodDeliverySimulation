@@ -1,3 +1,18 @@
+// ******************************************************
+// Class:			MapCreationInspector
+// Name:			Carson Frankovich
+// Date:			2022-11-07
+//
+// Purpose:			Contains all attributes and behaviors of the side panel in the map creation tool.
+//
+// Attributes:		-inspectorpanel: JPanel
+//					
+// Methods:			+configureInspectorPanel( ): void
+//					+void( MapCreationGridNode ): static
+//					+getPanel( ): JPanel
+//					
+// ******************************************************
+
 package dev.frankovich.gui;
 
 import java.awt.Color;

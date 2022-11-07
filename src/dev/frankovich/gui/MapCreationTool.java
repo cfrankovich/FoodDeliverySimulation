@@ -1,3 +1,24 @@
+// ******************************************************
+// Class:			MapCreationTool
+// Name:			Carson Frankovich
+// Date:			2022-11-07
+//
+// Purpose:			Runs a graphical environment for the user to create and save a map.
+//
+// Attributes:		-frame: JFrame
+//					-panel: JPanel
+//					-selectedTool: int
+//					-map[][]: MapCreationGridNode
+//					
+// Methods:			-configureJFrame( ): void
+//					-configureJPanel( ): void
+//					-createGrid( ): void
+//					+setSelectedTool( int ): void
+//					+getSelectedTool( ): int
+//					-exportMap( ): void
+//					
+// ******************************************************
+
 package dev.frankovich.gui;
 
 import java.awt.Color;

@@ -1,3 +1,22 @@
+// ******************************************************
+// Class:			SimulationController
+// Name:			Carson Frankovich
+// Date:			2022-11-07
+//
+// Purpose:			Controlls the simulation. This class is responsible for all "high level" behavior in the simulation.
+//
+// Attributes:		-map[][]: Node
+//					-duration: double
+//					-menuItems[]: MenuItem
+//					-drivers[]: Driver
+//					
+// Methods:			+processArguments( SimulationController, String[] ): void
+//					+runSimulation( ): void
+//					+exportReport( ): void
+//					+printMap( ): void
+//					
+// ******************************************************
+
 package dev.frankovich.sim;
 
 import java.io.File;

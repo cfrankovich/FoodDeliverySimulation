@@ -1,3 +1,17 @@
+// ******************************************************
+// Class:			Node
+// Name:			Carson Frankovich
+// Date:			2022-11-07
+//
+// Purpose:			The basic or empty part of the map.
+//
+// Attributes:		-xLocation: int
+//					-yLocation: int
+//					
+// Methods:			+toString( ): String
+//					
+// ******************************************************
+
 package dev.frankovich.sim;
 
 public class Node 
