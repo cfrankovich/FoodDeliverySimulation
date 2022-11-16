@@ -13,7 +13,6 @@
 // Methods:			+processArguments( SimulationController, String[] ): void
 //					+runSimulation( ): void
 //					+exportReport( ): void
-//					+printMap( ): void
 //					
 // ******************************************************
 
@@ -30,32 +29,32 @@ public class SimulationController
     private double duration;
     private MenuItem menuItems[];
     private Driver drivers[];
+    private int minutesRan;
 
-    public SimulationController()
+    public SimulationController(String[] args)
     {
-
+        processArguments(args);
+        minutesRan = 0;
     }
 
-    public void processArguments(SimulationController controller, String[] args)
+    public void processArguments(String[] args)
     {
         for (String arg : args)
         {
             String argSplit[] = arg.split("=");
             if (argSplit[0].equals("--create-map"))
             {
-                MapUtils mapUtils = new MapUtils();
-                mapUtils.createMap();
+                MapUtils.createMap();
             }
             else if (argSplit[0].equals("--map"))
             {
                 try
                 {
-                    MapUtils mapUtils = new MapUtils();
-                    map = mapUtils.useMap(argSplit[1]);
+                    map = MapUtils.useMap(argSplit[1]);
                 } 
                 catch (Exception e)
                 {
-                    System.out.println("Please provide a valid file.");
+                    System.out.println("[Error] Please provide a valid file.");
                     System.exit(0);
                 }
             }
@@ -65,6 +64,14 @@ public class SimulationController
 
     public void runSimulation()
     {
+        if (map == null) { map = MapUtils.correctMapError(); }
+
+        /* every cycle is one minute */
+        boolean running = true;
+        while (running)
+        {
+            minutesRan++;
+        }
 
     }
 
@@ -73,16 +80,4 @@ public class SimulationController
 
     }
     
-    public void printMap()
-    {
-        for (Node[] row : map)
-        {
-            for (Node node : row)
-            {
-                System.out.print(node);
-            }
-            System.out.print("\n");
-        }
-    }
-
 }

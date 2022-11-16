@@ -23,3 +23,10 @@
     [ ] Drivers are randomly put on the roads
 [x] Program can read map files
 [ ] implement RLE on map files  
+
+## Sprint 2
+[ ] Simulation controller contains methods that generates orders along with delivery. Drivers will find the best path towwards restaurant and house.
+
+[ ] Nodes are now defined as being n miles apart and delivery driver speed determines how fast they travel across nodes. Restaurant perparation times are now working. Drivers wait at a restaurant if food is not ready. Clock is keeping track of the real time.
+
+[ ] Driver objects now make decisions on whether or not to pick up multiple orders.

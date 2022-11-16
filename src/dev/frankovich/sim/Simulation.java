@@ -17,10 +17,8 @@ public class Simulation
 {
     public static void main(String[] args)
     {
-        SimulationController controller = new SimulationController();
-        controller.processArguments(controller, args);
+        SimulationController controller = new SimulationController(args);
         controller.runSimulation();
-        //controller.printMap();
     }
 
 }
