@@ -1,17 +1,22 @@
 // ******************************************************
 // Class:			MenuItem
 // Name:			Carson Frankovich
-// Date:			2022-11-07
+// Date:			2022-12-13
 //
-// Purpose:			Blueprint class for any menu items in an order.
+// Purpose:			Items to be ordered
 //
 // Attributes:		-prepTime: double
 //					-itemName: String
 //					-price: double
 //					-frequency: double
+//					-itemType: int
 //					
-// Methods:			
-//
+// Methods:			-updateAttributes( String[] ): void
+//					+getPrepTime( ): double
+//					+getItemType( ): int
+//					+getName( ): String
+//					+getPrice( ): double
+//					
 // ******************************************************
 
 package dev.frankovich.sim;
@@ -22,10 +27,28 @@ public class MenuItem
     private String itemName;
     private double price;
     private double frequency;
+    private int itemType; /* 1 - drink, 2 - entree, 3 - side */
 
-    public MenuItem()
+    public MenuItem(String[] iteminfo)
     {
-
+        updateAttributes(iteminfo);
     }
+
+    private void updateAttributes(String[] iteminfo)
+    {
+        itemName = iteminfo[0];
+        prepTime = Double.parseDouble(iteminfo[1]);
+        price = Double.parseDouble(iteminfo[2]);
+        frequency = Double.parseDouble(iteminfo[3]);
+        itemType = Integer.parseInt(iteminfo[4]);
+    }
+
+    public double getPrepTime() { return prepTime; }
+    
+    public int getItemType() { return itemType; }
+
+    public String getName() { return itemName; }
+
+    public double getPrice() { return price; }
 
 }

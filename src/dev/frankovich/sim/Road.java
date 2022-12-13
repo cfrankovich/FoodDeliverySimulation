@@ -1,9 +1,9 @@
 // ******************************************************
 // Class:			Road
 // Name:			Carson Frankovich
-// Date:			2022-11-07
+// Date:			2022-12-13
 //
-// Purpose:			The "drivable" path for the drivers. Contains traffic percentage and speed limit for accurate results. Extends Node class.
+// Purpose:			Drivable or "walkable" routes for drivers
 //
 // Attributes:		-trafficPercentage: double
 //					-speedLimit: double

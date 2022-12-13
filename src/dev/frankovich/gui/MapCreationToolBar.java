@@ -1,9 +1,9 @@
 // ******************************************************
 // Class:			MapCreationToolBar
 // Name:			Carson Frankovich
-// Date:			2022-11-07
+// Date:			2022-12-13
 //
-// Purpose:			Contains all attributes and behaviors for the tool bar in the map creation tool.
+// Purpose:			Tool bar for map creation tool
 //
 // Attributes:		-toolbarpanel: JPanel
 //					-tools[]: JButton

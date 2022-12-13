@@ -1,20 +1,24 @@
 // ******************************************************
 // Class:			House
 // Name:			Carson Frankovich
-// Date:			2022-11-07
+// Date:			2022-12-13
 //
-// Purpose:			Places orders for food and keeps track of the wait time of the order.
+// Purpose:			Places orders
 //
 // Attributes:		-waitTime: double
 //					-order: Order
 //					
-// Methods:			+recieveFood( ): void
-//					+placeOrder( MenuItem ): void
+// Methods:			+recieveFood( double ): void
+//					+placeOrder( int, Restaurant, double ): void
+//					+getOrder( ): Order
 //					+toString( ): String
+//					+update( ): void
 //					
 // ******************************************************
 
 package dev.frankovich.sim;
+
+import dev.frankovich.util.Utils;
 
 public class House extends Node
 {
@@ -26,20 +30,41 @@ public class House extends Node
         super(x, y);
     }
 
-    public void recieveFood()
+    public void recieveFood(double d)
     {
-
+        order.setDeliveredTime((int)d);
+        waitTime = d - waitTime;
+        Utils.archivedOrders.add(order);
+        order = null;
     }
 
-    public void placeOrder(MenuItem itemsForOrder[])
+    public void placeOrder(int orderID, Restaurant restaurant, double minutesRan)
     {
+        waitTime = minutesRan; 
+        order = new Order(orderID, this, (int)minutesRan);
+        MenuItem items[] = Utils.generateOrder();
+        for (MenuItem item : items)
+        {
+            order.addItem(item);
+        }
+        order.calculatePrepTime();
+        restaurant.addOrder(order);
+    }
 
+    public Order getOrder()
+    {
+        return order;
     }
 
     @Override
     public String toString()
     {
         return "3";
+    }
+
+    public void update()
+    {
+        waitTime++;
     }
 
 }

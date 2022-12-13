@@ -1,16 +1,17 @@
 // ******************************************************
 // Class:			MapUtils
 // Name:			Carson Frankovich
-// Date:			2022-11-07
+// Date:			2022-12-13
 //
-// Purpose:			Extra tools regarding the map of the simulation.
+// Purpose:			Utilities to aid in working with the map
 //
 // Attributes:		
-//
-// Methods:			+createMap( ): void
-//					+useMap( String ): Node[][]
-//					+compressMap( ): void
-//                  +charToNode ( char, int, int ) : Node
+// Methods:			+void( ): static
+//					+Node[][]( String ): static
+//					+Node( char, int, int ): static
+//					+void( String ): static
+//					+void( String ): static
+//					+Node[][]( ): static
 //					
 // ******************************************************
 
@@ -22,18 +23,20 @@ import dev.frankovich.sim.Restaurant;
 import dev.frankovich.sim.Road;
 
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 import dev.frankovich.gui.MapCreationTool;
 
 public class MapUtils
 {
-    public static void createMap()
+    public static void createNewMap()
     {
-        new MapCreationTool();
+        new MapCreationTool("newmap.txt");
     }
 
-    public static Node[][] useMap(String fileName)
+    public static Node[][] createMap(String fileName)
     {
         Node map[][] = new Node[20][20];
         int i, k;
@@ -48,6 +51,12 @@ public class MapUtils
                 k = 0;
                 for (char c : line.toCharArray())
                 {
+                    if (c == '-')
+                    {
+                        decompressMap(fileName);
+                        input.close();
+                        return createMap(fileName);
+                    }
                     map[i][k] = charToNode(c, i, k);
                     k++;
                 }
@@ -73,9 +82,83 @@ public class MapUtils
         return null; 
     }
 
-    public void compressMap()
+    public static void compressMap(String fileName)
     {
+        String output = "";
+        try
+        {
+            File mapFile = new File(fileName);
+            Scanner input = new Scanner(mapFile);
 
+            while (input.hasNext())
+            {
+                String line = input.nextLine();
+                char lineChars[] = line.toCharArray();
+                char current = lineChars[0]; 
+                int count = 1;
+                for (int i = 1; i < line.length(); i++)
+                {
+                    if (lineChars[i] == current)
+                    {
+                        count++;
+                    }
+                    else
+                    {
+                        output += "" + current;
+                        output += "" + count + "-";
+                        current = lineChars[i]; 
+                        count = 1;
+                    }
+                }
+                output += "" + current + "" + count + "-\n";
+            }
+            input.close();
+            PrintWriter pWriter = new PrintWriter(new FileOutputStream(fileName, false));
+            pWriter.print(output);
+            pWriter.close();
+        }
+        catch(Exception e)
+        {
+            System.out.println("Unable to read file \"" + fileName + "\"");
+            System.out.println("Make sure the file inputed is a text file with numbers.");
+            System.out.println("Continuing without encoding map file...");
+        }
+    }
+
+    public static void decompressMap(String fileName)
+    {
+        String output = "";
+        try
+        {
+            File mapFile = new File(fileName);
+            Scanner input = new Scanner(mapFile);
+
+            while (input.hasNext())
+            {
+                String line = input.nextLine();
+                String[] splitLine = line.split("-");
+                for (String s : splitLine)
+                {
+                    char current = s.charAt(0);
+                    int count = Integer.parseInt(s.substring(1));
+                    for (int i = 0; i < count; i++)
+                    {
+                        output += "" + current; 
+                    }
+                }
+                output += "\n";
+            }
+            input.close();
+            PrintWriter pWriter = new PrintWriter(new FileOutputStream(fileName, false));
+            pWriter.print(output);
+            pWriter.close();
+        }
+        catch(Exception e)
+        {
+            System.out.println("Unable to read file \"" + fileName + "\"");
+            System.out.println("Make sure the file inputed is a text file with numbers.");
+            System.out.println("Continuing without encoding map file...");
+        }
     }
 
     public static Node[][] correctMapError()
@@ -90,7 +173,7 @@ public class MapUtils
             System.out.print("Map File Path: ");
             String fileName = in.nextLine();
             in.close();
-            return useMap(fileName);
+            return createMap(fileName);
         }
         else
         {

@@ -1,14 +1,14 @@
 // ******************************************************
 // Class:			Node
 // Name:			Carson Frankovich
-// Date:			2022-11-07
+// Date:			2022-12-13
 //
-// Purpose:			The basic or empty part of the map.
+// Purpose:			Basic blueprint for any node in the map
 //
-// Attributes:		-xLocation: int
-//					-yLocation: int
-//					
+// Attributes:		
 // Methods:			+toString( ): String
+//					+getXLocation( ): int
+//					+getYLocation( ): int
 //					
 // ******************************************************
 
@@ -16,8 +16,8 @@ package dev.frankovich.sim;
 
 public class Node 
 {
-    private int xLocation;
-    private int yLocation;    
+    protected int xLocation;
+    protected int yLocation;    
 
     public Node(int x, int y)
     {
@@ -30,4 +30,15 @@ public class Node
     {
         return "0";
     }
+
+    public int getXLocation()
+    {
+        return xLocation;
+    }
+
+    public int getYLocation()
+    {
+        return yLocation;
+    }
+
 }

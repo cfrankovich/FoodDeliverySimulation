@@ -1,9 +1,9 @@
 // ******************************************************
 // Class:			MapCreationGridNode
 // Name:			Carson Frankovich
-// Date:			2022-11-07
+// Date:			2022-12-13
 //
-// Purpose:			Provides configurable pieces for the grid in the map creation tool.
+// Purpose:			Node object for the grid in the map creation tool
 //
 // Attributes:		-button: JButton
 //					-nodeType: int
@@ -79,7 +79,6 @@ public class MapCreationGridNode
 
     private void actUponTool(int selectedTool)
     {
-        System.out.println(xLocation + " " + yLocation);
         switch(selectedTool)
         {
             case 2:

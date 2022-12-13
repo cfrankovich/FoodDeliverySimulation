@@ -1,9 +1,9 @@
 // ******************************************************
 // Class:			MapCreationInspector
 // Name:			Carson Frankovich
-// Date:			2022-11-07
+// Date:			2022-12-13
 //
-// Purpose:			Contains all attributes and behaviors of the side panel in the map creation tool.
+// Purpose:			Inspector element for the map creation tool
 //
 // Attributes:		-inspectorpanel: JPanel
 //					

@@ -1,14 +1,15 @@
 // ******************************************************
 // Class:			MapCreationTool
 // Name:			Carson Frankovich
-// Date:			2022-11-07
+// Date:			2022-12-13
 //
-// Purpose:			Runs a graphical environment for the user to create and save a map.
+// Purpose:			Map creator tool which brings up a GUI to interact with
 //
 // Attributes:		-frame: JFrame
 //					-panel: JPanel
 //					-selectedTool: int
 //					-map[][]: MapCreationGridNode
+//					-fileName: String
 //					
 // Methods:			-configureJFrame( ): void
 //					-configureJPanel( ): void
@@ -28,6 +29,8 @@ import java.io.PrintWriter;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+import dev.frankovich.util.MapUtils;
+
 public class MapCreationTool 
 {
     private JFrame frame;
@@ -36,9 +39,11 @@ public class MapCreationTool
     private final int FRAME_HEIGHT = 589;
     private int selectedTool;
     private MapCreationGridNode map[][];
+    private String fileName;
 
-    public MapCreationTool()
+    public MapCreationTool(String fileName)
     {
+        this.fileName = fileName;
         map = new MapCreationGridNode[20][20];
         selectedTool = 0;
         frame = new JFrame("FDS | Map Creation Tool");
@@ -104,7 +109,7 @@ public class MapCreationTool
     {
         try
         {
-            File exportFile = new File("newmap.txt");
+            File exportFile = new File(fileName);
             PrintWriter output = new PrintWriter(exportFile);
             for (MapCreationGridNode[] row : map)
             {
@@ -121,6 +126,10 @@ public class MapCreationTool
         {
             System.out.println("Export Failed!");
         }
+
+        MapUtils.compressMap(fileName);
+        MapUtils.decompressMap(fileName);
+
     }
 
 }

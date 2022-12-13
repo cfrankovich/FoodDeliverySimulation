@@ -1,12 +1,11 @@
 // ******************************************************
 // Class:			Simulation
 // Name:			Carson Frankovich
-// Date:			2022-11-07
+// Date:			2022-12-13
 //
-// Purpose:			Runs the program and processes arguments.
+// Purpose:			Main class
 //
 // Attributes:		
-//
 // Methods:			+void( String[] ): static
 //					
 // ******************************************************
@@ -17,8 +16,7 @@ public class Simulation
 {
     public static void main(String[] args)
     {
-        SimulationController controller = new SimulationController(args);
-        controller.runSimulation();
+        new SimulationController(args);
     }
 
 }
