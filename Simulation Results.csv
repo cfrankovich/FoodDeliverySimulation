@@ -1,0 +1,68 @@
+Order Frequency,0.8
+
+Price Per Gallon,3.2
+Driver Salary,10.0
+Num Drivers,1
+
+Start Time,8
+End Time,23
+Duration,900
+
+Average Delivery Time,32.35294117647059
+Total Miles,1477.0
+Revenue,559.4700000000007
+Driver Pay,150.0
+Profit,409.4700000000007
+
+Order #,Items,Total Price,Ordered,Ready,Picked Up,Delivered,Total Time
+0,Drink+Burger+Fries,10.97,5,18,18,29,24
+1,Drink+Burger+Fries,10.97,10,18,18,51,41
+3,Drink+Burger+Fries,10.97,20,40,40,73,53
+4,Drink+Burger+Fries,10.97,30,40,40,74,44
+6,Drink+Burger+Fries,10.97,50,62,62,74,24
+7,Drink+Burger+Fries,10.97,55,62,62,75,20
+9,Drink+Burger+Fries,10.97,80,91,91,102,22
+10,Drink+Burger+Fries,10.97,105,115,115,126,21
+11,Drink+Burger+Fries,10.97,110,115,115,126,16
+13,Drink+Burger+Fries,10.97,130,140,140,154,24
+14,Drink+Burger+Fries,10.97,140,140,140,179,39
+15,Drink+Burger+Fries,10.97,145,168,168,180,35
+16,Drink+Burger+Fries,10.97,155,168,168,205,50
+18,Drink+Burger+Fries,10.97,180,191,191,229,49
+19,Drink+Burger+Fries,10.97,190,191,191,230,40
+20,Drink+Burger+Fries,10.97,195,219,219,230,35
+21,Drink+Burger+Fries,10.97,235,245,245,258,23
+22,Drink+Burger+Fries,10.97,240,245,245,259,19
+23,Drink+Burger+Fries,10.97,270,284,284,297,27
+24,Drink+Burger+Fries,10.97,280,284,284,322,42
+25,Drink+Burger+Fries,10.97,290,311,311,322,32
+26,Drink+Burger+Fries,10.97,325,335,335,346,21
+27,Drink+Burger+Fries,10.97,330,335,335,367,37
+28,Drink+Burger+Fries,10.97,335,356,356,388,53
+29,Drink+Burger+Fries,10.97,360,377,377,411,51
+30,Drink+Burger+Fries,10.97,380,399,399,434,54
+31,Drink+Burger+Fries,10.97,390,399,399,455,65
+33,Drink+Burger+Fries,10.97,410,424,424,456,46
+34,Drink+Burger+Fries,10.97,415,424,424,456,41
+35,Drink+Burger+Fries,10.97,430,444,444,457,27
+36,Drink+Burger+Fries,10.97,465,476,476,487,22
+37,Drink+Burger+Fries,10.97,475,476,476,487,12
+38,Drink+Burger+Fries,10.97,490,500,500,511,21
+39,Drink+Burger+Fries,10.97,495,500,500,512,17
+40,Drink+Burger+Fries,10.97,515,528,528,539,24
+41,Drink+Burger+Fries,10.97,540,551,551,563,23
+42,Drink+Burger+Fries,10.97,550,551,551,563,13
+43,Drink+Burger+Fries,10.97,580,593,593,606,26
+44,Drink+Burger+Fries,10.97,595,620,620,632,37
+45,Drink+Burger+Fries,10.97,635,648,648,661,26
+46,Drink+Burger+Fries,10.97,640,648,648,662,22
+47,Drink+Burger+Fries,10.97,665,679,679,690,25
+48,Drink+Burger+Fries,10.97,695,706,706,717,22
+49,Drink+Burger+Fries,10.97,720,731,731,745,25
+50,Drink+Burger+Fries,10.97,730,731,731,770,40
+51,Drink+Burger+Fries,10.97,745,759,759,793,48
+52,Drink+Burger+Fries,10.97,765,781,781,819,54
+53,Drink+Burger+Fries,10.97,775,781,781,820,45
+54,Drink+Burger+Fries,10.97,790,806,806,820,30
+55,Drink+Burger+Fries,10.97,805,806,806,821,16
+56,Drink+Burger+Fries,10.97,825,839,839,852,27

@@ -22,7 +22,7 @@ PrintNeutral () {
 
 Run () {
     PrintNeutral "Running program...\n"
-    java -cp ./build dev/frankovich/sim/Simulation $1
+    java -cp ./build dev/frankovich/sim/Simulation $@
     echo -ne "\n"
     PrintNeutral "Program exited with exit code $?"
 }
